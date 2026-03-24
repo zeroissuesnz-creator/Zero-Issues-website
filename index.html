@@ -3,23 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zero Issues | Financial Corrections. Quietly Resolved.</title>
+  <title>Zero Issues | Back to Zero. Forward with Confidence.</title>
   <meta
     name="description"
-    content="Zero Issues helps business owners fix messy Xero files with discretion, structure, and clarity. Xero resets, GST rescue, bank reconciliation and financial corrections."
+    content="Zero Issues helps business owners correct messy Xero files with discretion, structure and clarity. Xero resets, GST rescue, bank reconciliation, receivables, payables and lender-ready financial packs."
   />
   <style>
     :root {
-      --bg: #f7f4ef;
-      --bg-soft: #efe9df;
+      --bg: #f4f6f8;
+      --bg-soft: #edf5f8;
       --card: #ffffff;
-      --text: #1f1b17;
-      --muted: #6e655c;
-      --line: #ddd3c7;
-      --accent: #b08a57;
-      --accent-dark: #8f6f45;
-      --shadow: 0 12px 30px rgba(31, 27, 23, 0.08);
-      --radius: 20px;
+      --text: #173b67;
+      --text-dark: #12294b;
+      --muted: #5e6f80;
+      --line: #d6e3ea;
+      --navy: #173b67;
+      --teal: #3da7a1;
+      --teal-dark: #2e8b86;
+      --sky: #abd3ea;
+      --green-dot: #49b979;
+      --shadow: 0 14px 34px rgba(23, 59, 103, 0.08);
+      --radius: 22px;
       --max: 1180px;
     }
 
@@ -33,9 +37,9 @@
 
     body {
       margin: 0;
-      font-family: "Georgia", "Times New Roman", serif;
       background: var(--bg);
       color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
       line-height: 1.6;
     }
 
@@ -58,93 +62,107 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      background: rgba(244, 246, 248, 0.94);
       backdrop-filter: blur(12px);
-      background: rgba(247, 244, 239, 0.88);
-      border-bottom: 1px solid rgba(221, 211, 199, 0.7);
+      border-bottom: 1px solid rgba(171, 211, 234, 0.45);
     }
 
     .nav {
+      min-height: 88px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 78px;
       gap: 20px;
     }
 
     .brand {
       display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo {
+      height: 60px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: flex;
       flex-direction: column;
-      line-height: 1;
+      line-height: 1.05;
     }
 
     .brand-title {
-      font-size: 1.2rem;
-      letter-spacing: 0.18em;
+      font-size: 1.15rem;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: 700;
+      color: var(--navy);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .brand-sub {
-      font-size: 0.75rem;
-      color: var(--muted);
       margin-top: 6px;
+      font-size: 0.78rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .nav-links {
       display: flex;
-      gap: 28px;
       align-items: center;
+      gap: 28px;
       flex-wrap: wrap;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
-    }
-
-    .nav-links a {
       color: var(--muted);
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      color: var(--navy);
     }
 
     .btn {
       display: inline-block;
       padding: 14px 22px;
       border-radius: 999px;
-      border: 1px solid var(--accent);
-      transition: 0.25s ease;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: 0.25s ease;
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: white;
+      background: var(--teal);
+      color: #fff;
+      border-color: var(--teal);
     }
 
     .btn-primary:hover {
-      background: var(--accent-dark);
-      border-color: var(--accent-dark);
+      background: var(--teal-dark);
+      border-color: var(--teal-dark);
       transform: translateY(-1px);
     }
 
     .btn-secondary {
       background: transparent;
-      color: var(--text);
+      color: var(--navy);
+      border-color: var(--sky);
     }
 
     .btn-secondary:hover {
-      background: #f1e8da;
+      background: #eaf5f7;
       transform: translateY(-1px);
     }
 
     .hero {
-      padding: 90px 0 70px;
-      position: relative;
+      padding: 86px 0 70px;
       overflow: hidden;
+      position: relative;
     }
 
     .hero-grid {
@@ -156,32 +174,35 @@
 
     .eyebrow {
       display: inline-block;
+      margin-bottom: 18px;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent-dark);
-      margin-bottom: 18px;
+      color: var(--teal-dark);
+      font-weight: 700;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 5vw, 5.2rem);
+      margin: 0 0 20px;
+      font-size: clamp(2.7rem, 5vw, 5.2rem);
       line-height: 0.98;
-      margin: 0 0 22px;
       font-weight: 600;
+      color: var(--navy);
     }
 
     .hero-copy p {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 650px;
       margin: 0 0 26px;
+      max-width: 690px;
+      font-size: 1.14rem;
+      color: var(--muted);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .hero-actions {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
       margin-bottom: 26px;
     }
 
@@ -189,51 +210,50 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 20px;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .pill {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.75);
       padding: 10px 14px;
       border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.8);
       color: var(--muted);
       font-size: 0.92rem;
     }
 
     .hero-card {
-      background: linear-gradient(180deg, #fffdf9 0%, #f4ece1 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #f1f8fb 100%);
       border: 1px solid var(--line);
       border-radius: 28px;
       padding: 34px;
       box-shadow: var(--shadow);
-      position: relative;
     }
 
     .hero-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
       font-size: 1.45rem;
+      color: var(--navy);
     }
 
     .hero-card p {
-      margin-top: 0;
+      margin: 0;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .mini-list {
+      list-style: none;
       margin: 24px 0 0;
       padding: 0;
-      list-style: none;
       font-family: Arial, Helvetica, sans-serif;
     }
 
     .mini-list li {
       padding: 14px 0;
-      border-top: 1px solid rgba(176, 138, 87, 0.18);
-      color: var(--text);
+      border-top: 1px solid rgba(171, 211, 234, 0.5);
+      color: var(--navy);
+      font-weight: 600;
     }
 
     section {
@@ -241,14 +261,15 @@
     }
 
     .section-head {
-      max-width: 760px;
+      max-width: 820px;
       margin-bottom: 34px;
     }
 
     .section-head h2 {
-      font-size: clamp(2rem, 3vw, 3.2rem);
-      line-height: 1.06;
       margin: 0 0 14px;
+      font-size: clamp(2rem, 3vw, 3.1rem);
+      line-height: 1.06;
+      color: var(--navy);
     }
 
     .section-head p {
@@ -275,7 +296,7 @@
     }
 
     .steps-grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
 
     .proof-grid {
@@ -291,15 +312,19 @@
     }
 
     .card h3 {
-      margin-top: 0;
-      font-size: 1.35rem;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
+      font-size: 1.32rem;
+      color: var(--navy);
     }
 
     .card p {
-      margin-bottom: 0;
+      margin: 0;
       color: var(--muted);
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .soft {
+      background: var(--bg-soft);
     }
 
     .service-card {
@@ -309,12 +334,13 @@
     }
 
     .service-tag {
+      margin-bottom: 12px;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 0.78rem;
+      font-weight: 700;
       letter-spacing: 0.13em;
       text-transform: uppercase;
-      color: var(--accent-dark);
-      margin-bottom: 12px;
+      color: var(--teal-dark);
     }
 
     .service-card ul {
@@ -334,39 +360,58 @@
       border-top: 1px solid var(--line);
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 700;
-      color: var(--text);
+      color: var(--navy);
     }
 
-    .soft {
-      background: var(--bg-soft);
+    .disclaimer-box {
+      margin-top: 26px;
+      padding: 22px 24px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
+    }
+
+    .disclaimer-box strong {
+      color: var(--navy);
+    }
+
+    .quote-card {
+      background: linear-gradient(135deg, #173b67 0%, #24558a 100%);
+      border-radius: 28px;
+      padding: 42px;
+      color: white;
+      box-shadow: var(--shadow);
     }
 
     .quote {
-      font-size: 1.45rem;
-      line-height: 1.4;
       margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.35;
     }
 
     .quote small {
       display: block;
-      margin-top: 18px;
-      color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 16px;
       font-size: 0.95rem;
+      color: rgba(255,255,255,0.82);
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     .cta {
-      background: linear-gradient(135deg, #1f1b17 0%, #302821 100%);
+      background: linear-gradient(135deg, #173b67 0%, #214975 100%);
       color: white;
-      border-radius: 28px;
-      padding: 46px;
+      border-radius: 30px;
+      padding: 48px;
       box-shadow: var(--shadow);
     }
 
     .cta p {
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.84);
       font-family: Arial, Helvetica, sans-serif;
-      max-width: 720px;
+      max-width: 760px;
     }
 
     .cta .btn-secondary {
@@ -381,32 +426,36 @@
     .contact-box {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 26px;
+      gap: 24px;
       align-items: start;
+      margin-top: 26px;
     }
 
     .contact-detail {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
       padding: 24px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
       font-family: Arial, Helvetica, sans-serif;
     }
 
     footer {
       padding: 36px 0 46px;
       color: var(--muted);
-      font-family: Arial, Helvetica, sans-serif;
       font-size: 0.92rem;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1100px) {
       .hero-grid,
-      .contact-box,
       .problem-grid,
-      .services-grid,
       .steps-grid,
-      .proof-grid {
+      .proof-grid,
+      .contact-box {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .services-grid {
         grid-template-columns: 1fr 1fr;
       }
     }
@@ -422,21 +471,30 @@
         gap: 14px;
       }
 
+      .brand {
+        align-items: flex-start;
+      }
+
+      .brand-logo {
+        height: 52px;
+      }
+
       .hero {
         padding-top: 56px;
       }
 
       .hero-grid,
-      .contact-box,
       .problem-grid,
       .services-grid,
       .steps-grid,
-      .proof-grid {
+      .proof-grid,
+      .contact-box {
         grid-template-columns: 1fr;
       }
 
       .hero-card,
-      .cta {
+      .cta,
+      .quote-card {
         padding: 28px;
       }
 
@@ -451,8 +509,11 @@
   <div class="topbar">
     <div class="container nav">
       <div class="brand">
-        <span class="brand-title">Zero Issues</span>
-        <span class="brand-sub">Financial corrections. Quietly resolved.</span>
+        <img src="zero-issues-logo.png" alt="Zero Issues logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">Zero Issues</span>
+          <span class="brand-sub">Back to Zero. Forward with Confidence.</span>
+        </div>
       </div>
 
       <div class="nav-links">
@@ -460,7 +521,7 @@
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com">Get a Quote</a>
+        <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com?subject=Free Xero Health Check">Free Xero Health Check</a>
       </div>
     </div>
   </div>
@@ -468,16 +529,16 @@
   <header class="hero" id="top">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Confidential Xero clean-up service</span>
+        <span class="eyebrow">Confidential Xero correction service</span>
         <h1>Back to Zero.<br />Forward with Confidence.</h1>
         <p>
-          When your Xero file feels messy, unclear, behind, or out of control,
-          you do not need judgement. You need it handled properly.
-          Zero Issues provides discreet financial corrections for business owners who want clarity restored.
+          When your Xero file feels messy, unclear, behind, or out of control, you do not need
+          judgement. You need calm, capable help. Zero Issues specialises in correcting and restoring
+          Xero files so business owners can move forward with clarity.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com?subject=Quote Request - Zero Issues">Request a Quote</a>
+          <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com?subject=Free Xero Health Check">Book a FREE Xero Health Check</a>
           <a class="btn btn-secondary" href="#services">View Services</a>
         </div>
 
@@ -485,16 +546,16 @@
           <span class="pill">Xero resets</span>
           <span class="pill">Bank reconciliation</span>
           <span class="pill">GST corrections</span>
-          <span class="pill">Historic clean-up</span>
-          <span class="pill">Quietly resolved</span>
+          <span class="pill">Receivables & payables</span>
+          <span class="pill">Lender-ready packs</span>
         </div>
       </div>
 
       <div class="hero-card">
         <h3>When it has gotten out of control</h3>
         <p>
-          Old invoices still sitting there. Transactions that do not make sense.
-          Bank accounts that do not match. GST coding issues. Years of untidy history.
+          Old invoices still sitting there. Transactions that do not make sense. Bank accounts that
+          do not match. GST coding issues. Historical balances that never got cleaned up.
         </p>
 
         <ul class="mini-list">
@@ -512,9 +573,9 @@
       <div class="section-head">
         <h2>For business owners who need the mess handled properly</h2>
         <p>
-          Zero Issues is a specialist financial correction service focused on Xero files that need fixing,
-          untangling, reconciling, and restoring. We step in quietly, correct what needs correcting,
-          and return your file in a cleaner, more reliable state.
+          Zero Issues is a specialist Xero correction service. We step in quietly, identify what is
+          wrong, correct what needs correcting, and restore order to files that have become confusing,
+          unreliable or overwhelming.
         </p>
       </div>
 
@@ -522,22 +583,22 @@
         <div class="card">
           <h3>No judgement</h3>
           <p>
-            You are not the first person to fall behind, and you will not be the last.
-            We focus on resolution, not embarrassment.
+            Falling behind happens. We are here to fix the file properly, not make you feel worse about it.
           </p>
         </div>
 
         <div class="card">
           <h3>Discreet support</h3>
           <p>
-            We work quietly and professionally behind the scenes, with a calm and controlled approach.
+            We work calmly and professionally behind the scenes, with a service style that is clear,
+            contained and respectful.
           </p>
         </div>
 
         <div class="card">
           <h3>Real structure</h3>
           <p>
-            This is more than just ticking off transactions. We restore order so your file makes sense again.
+            This is more than ticking off transactions. We restore clarity so your Xero file makes sense again.
           </p>
         </div>
       </div>
@@ -549,8 +610,8 @@
       <div class="section-head">
         <h2>Services</h2>
         <p>
-          Most projects are quoted based on volume, complexity, and how much correction work is required.
-          We review first, then send a quote before any work starts.
+          Whether you need a quick fix or a deeper clean-up, we focus on correcting the file properly
+          so your numbers are more reliable, more usable and easier to move forward with.
         </p>
       </div>
 
@@ -568,14 +629,14 @@
             <li>Miscoded transaction corrections</li>
             <li>Suspense account clearing within scope</li>
           </ul>
-          <div class="service-footer">From $300 + GST</div>
+          <div class="service-footer">Fixed-fee option available</div>
         </div>
 
         <div class="card service-card">
           <div class="service-tag">Full Clean-Up</div>
           <h3>The Reset</h3>
           <p>
-            A deeper reset for Xero files that need real structure restored.
+            A deeper reset for Xero files that need proper structure restored.
           </p>
           <ul>
             <li>Full bank reconciliation</li>
@@ -586,7 +647,7 @@
             <li>Accounts payable cleanup</li>
             <li>Opening balance corrections where required</li>
           </ul>
-          <div class="service-footer">Quoted on review</div>
+          <div class="service-footer">Priced based on scope</div>
         </div>
 
         <div class="card service-card">
@@ -598,10 +659,10 @@
           <ul>
             <li>Reconcile transactions to GST periods</li>
             <li>Correct GST coding errors</li>
-            <li>Prepare outstanding returns</li>
-            <li>Restore confidence in the numbers</li>
+            <li>Prepare outstanding GST returns ready to file</li>
+            <li>Restore confidence in the figures</li>
           </ul>
-          <div class="service-footer">Quoted on review</div>
+          <div class="service-footer">Priced based on scope</div>
         </div>
 
         <div class="card service-card">
@@ -617,7 +678,7 @@
             <li>Debtor balance reconciliation</li>
             <li>Restore accurate receivables</li>
           </ul>
-          <div class="service-footer">Quoted on review</div>
+          <div class="service-footer">Priced based on scope</div>
         </div>
 
         <div class="card service-card">
@@ -633,8 +694,31 @@
             <li>Creditor balance reconciliation</li>
             <li>Accurate payable position restored</li>
           </ul>
-          <div class="service-footer">Quoted on review</div>
+          <div class="service-footer">Priced based on scope</div>
         </div>
+
+        <div class="card service-card">
+          <div class="service-tag">Lender Ready</div>
+          <h3>The Bank Pack</h3>
+          <p>
+            Professionally prepared draft financial information for finance applications and lender requests.
+          </p>
+          <ul>
+            <li>Year-to-date Profit &amp; Loss</li>
+            <li>Balance Sheet</li>
+            <li>GST Summary</li>
+            <li>Professionally formatted financial pack</li>
+            <li>Prepared properly, not just printed from Xero</li>
+            <li>Submission-ready presentation</li>
+          </ul>
+          <div class="service-footer">Priced separately</div>
+        </div>
+      </div>
+
+      <div class="disclaimer-box">
+        <strong>Please note:</strong> Zero Issues specialises in correcting and restoring your
+        Xero file only. We do not deal with the IRD on your behalf. Our focus is getting your
+        Xero records clean, structured and reliable so you are in a much better position moving forward.
       </div>
     </div>
   </section>
@@ -642,9 +726,9 @@
   <section id="process">
     <div class="container">
       <div class="section-head">
-        <h2>A simple process</h2>
+        <h2>FREE Xero Health Check (15 min)</h2>
         <p>
-          Clear, contained, and professional from the start.
+          A simple starting point for business owners who want clarity before committing to any work.
         </p>
       </div>
 
@@ -652,28 +736,35 @@
         <div class="card">
           <h3>1. Email us</h3>
           <p>
-            Send a brief description of what is wrong, unclear, or overdue in your Xero file.
+            Send us a brief description of what is wrong, unclear or worrying you in Xero.
           </p>
         </div>
 
         <div class="card">
           <h3>2. Grant access</h3>
           <p>
-            Provide advisor access so we can assess the scope of correction work needed.
+            Provide advisor access so we can review your Xero file properly.
           </p>
         </div>
 
         <div class="card">
-          <h3>3. Receive a quote</h3>
+          <h3>3. We review</h3>
           <p>
-            We review the work required and send a quote before any work begins.
+            We review your Xero file and identify what appears to be wrong or out of place.
           </p>
         </div>
 
         <div class="card">
-          <h3>4. We fix it</h3>
+          <h3>4. We advise</h3>
           <p>
-            We carry out the corrections carefully and return your file in a cleaner, more reliable state.
+            We let you know what we can see, what needs attention, and the best way forward.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>5. Help is on the way</h3>
+          <p>
+            A quote is sent. Once accepted, we get started and begin correcting the file.
           </p>
         </div>
       </div>
@@ -685,7 +776,7 @@
       <div class="section-head">
         <h2>What makes Zero Issues different</h2>
         <p>
-          Built for people who do not want noise, pressure, or lectures — just a proper fix.
+          Built for people who do not want noise, pressure or lectures. Just calm, capable help.
         </p>
       </div>
 
@@ -707,14 +798,15 @@
         <div class="card">
           <h3>Made for relief</h3>
           <p>
-            The outcome is not just cleaner accounts — it is mental breathing room and restored control.
+            The outcome is not just cleaner accounts. It is mental breathing room and restored control.
           </p>
         </div>
 
         <div class="card">
-          <h3>Xero-focused support</h3>
+          <h3>Xero file only</h3>
           <p>
-            We specialise in correcting and restoring your Xero file only. We do not communicate with the IRD on your behalf — our focus is getting your numbers clean, structured, and reliable so you can move forward with confidence.
+            Friendly, clear support focused specifically on your Xero file. We do not communicate with
+            the IRD on your behalf.
           </p>
         </div>
       </div>
@@ -723,10 +815,9 @@
 
   <section>
     <div class="container">
-      <div class="card">
+      <div class="quote-card">
         <p class="quote">
-          “When your Xero feels heavier than it should, we step in, clear it properly,
-          and hand it back in a state you can trust again.”
+          “Back to Zero. Forward with Confidence.”
           <small>Zero Issues</small>
         </p>
       </div>
@@ -736,10 +827,11 @@
   <section id="contact">
     <div class="container">
       <div class="cta">
-        <div class="section-head" style="margin-bottom: 26px;">
-          <h2 style="color: white; margin-bottom: 12px;">Ready to get back to zero?</h2>
+        <div class="section-head" style="margin-bottom: 0;">
+          <h2 style="color: white;">Start with a FREE Xero Health Check</h2>
           <p>
-            Email a short summary of what needs fixing and we will review the file and send a quote.
+            Email us with a brief description of the issue, grant advisor access, and we will review the
+            file, advise what looks wrong, and outline the best next step.
           </p>
         </div>
 
@@ -751,12 +843,12 @@
 
           <div class="contact-detail">
             <strong>What to send</strong><br /><br />
-            A brief outline of the issue, plus advisor access to your Xero file for review.
+            A short summary of the issue, plus advisor access to your Xero file so we can review it.
           </div>
         </div>
 
         <div style="margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap;">
-          <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com?subject=Quote Request - Zero Issues">Email Zero Issues</a>
+          <a class="btn btn-primary" href="mailto:zeroissuesnz@gmail.com?subject=Free Xero Health Check">Email Zero Issues</a>
           <a class="btn btn-secondary" href="#top">Back to top</a>
         </div>
       </div>
@@ -765,7 +857,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Zero Issues. Financial corrections. Quietly resolved.
+      © 2026 Zero Issues. Back to Zero. Forward with Confidence.
     </div>
   </footer>
 
